@@ -159,29 +159,11 @@ BW.person_id = Person.where(name: "Christian Bale").pluck(:id).first
 BW.character_name = "Bruce Wayne"
 BW.save
 
-BW2 = Role.new
-BW2.movie_id = Movie.where(title: "The Dark Knight").pluck(:id).first
-BW2.person_id = Person.where(name: "Christian Bale").pluck(:id).first
-BW2.character_name = "Bruce Wayne"
-BW2.save
-
-BW3 = Role.new
-BW3.movie_id = Movie.where(title: "The Dark Knight Rises").pluck(:id).first
-BW3.person_id = Person.where(name: "Christian Bale").pluck(:id).first
-BW3.character_name = "Bruce Wayne"
-BW3.save
-
 Alfred = Role.new
 Alfred.movie_id = Movie.where(title: "Batman Begins").pluck(:id).first
 Alfred.person_id = Person.where(name: "Michael Caine").pluck(:id).first
 Alfred.character_name = "Alfred"
 Alfred.save
-
-Alfred2 = Role.new
-Alfred2.movie_id = Movie.where(title: "The Dark Knight").pluck(:id).first
-Alfred2.person_id = Person.where(name: "Michael Caine").pluck(:id).first
-Alfred2.character_name = "Alfred"
-Alfred2.save
 
 RAG = Role.new
 RAG.movie_id = Movie.where(title: "Batman Begins").pluck(:id).first
@@ -195,23 +177,17 @@ Rachel.person_id = Person.where(name: "Katie Holmes").pluck(:id).first
 Rachel.character_name = "Rachel Dawes"
 Rachel.save
 
-Rachel2 = Role.new
-Rachel2.movie_id = Movie.where(title: "The Dark Knight").pluck(:id).first
-Rachel2.person_id = Person.where(name: "Maggie Gyllenhaal").pluck(:id).first
-Rachel2.character_name = "Rachel Dawes"
-Rachel2.save
-
 Commish = Role.new
 Commish.movie_id = Movie.where(title: "Batman Begins").pluck(:id).first
 Commish.person_id = Person.where(name: "Gary Oldman").pluck(:id).first
 Commish.character_name = "Commissioner Gordon"
 Commish.save
 
-Commish2 = Role.new
-Commish2.movie_id = Movie.where(title: "The Dark Knight Rises").pluck(:id).first
-Commish2.person_id = Person.where(name: "Gary Oldman").pluck(:id).first
-Commish2.character_name = "Commissioner Gordon"
-Commish2.save
+BW2 = Role.new
+BW2.movie_id = Movie.where(title: "The Dark Knight").pluck(:id).first
+BW2.person_id = Person.where(name: "Christian Bale").pluck(:id).first
+BW2.character_name = "Bruce Wayne"
+BW2.save
 
 Joker = Role.new
 Joker.movie_id = Movie.where(title: "The Dark Knight").pluck(:id).first
@@ -224,6 +200,30 @@ Harvey.movie_id = Movie.where(title: "The Dark Knight").pluck(:id).first
 Harvey.person_id = Person.where(name: "Aaron Eckhart").pluck(:id).first
 Harvey.character_name = "Harvey Dent"
 Harvey.save
+
+Alfred2 = Role.new
+Alfred2.movie_id = Movie.where(title: "The Dark Knight").pluck(:id).first
+Alfred2.person_id = Person.where(name: "Michael Caine").pluck(:id).first
+Alfred2.character_name = "Alfred"
+Alfred2.save
+
+Rachel2 = Role.new
+Rachel2.movie_id = Movie.where(title: "The Dark Knight").pluck(:id).first
+Rachel2.person_id = Person.where(name: "Maggie Gyllenhaal").pluck(:id).first
+Rachel2.character_name = "Rachel Dawes"
+Rachel2.save
+
+BW3 = Role.new
+BW3.movie_id = Movie.where(title: "The Dark Knight Rises").pluck(:id).first
+BW3.person_id = Person.where(name: "Christian Bale").pluck(:id).first
+BW3.character_name = "Bruce Wayne"
+BW3.save
+
+Commish2 = Role.new
+Commish2.movie_id = Movie.where(title: "The Dark Knight Rises").pluck(:id).first
+Commish2.person_id = Person.where(name: "Gary Oldman").pluck(:id).first
+Commish2.character_name = "Commissioner Gordon"
+Commish2.save
 
 Bane = Role.new
 Bane.movie_id = Movie.where(title: "The Dark Knight Rises").pluck(:id).first
