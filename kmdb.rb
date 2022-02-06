@@ -80,7 +80,6 @@ Role.destroy_all
 #rails generate model Person
 #rails generate model Role
 
-
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
 # TODO!
@@ -246,14 +245,17 @@ Catwoman.save
 
 # Prints a header for the movies output
 
-puts "There are #{Movie.all.count} movies"
-
 puts "Movies"
 puts "======"
 puts ""
 
 # Query the movies data and loop through the results to display the movies output
 # TODO!
+
+movies = Movie.all
+for film in movies
+    puts "#{film.title} #{film.year} #{film.rating} #{Person.where(id: film.person_id).pluck(:name).first}"
+end
 
 # Prints a header for the cast output
 puts ""
@@ -263,3 +265,8 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
 # TODO!
+
+cast = Role.all
+for character in cast
+    puts "#{Movie.where(id: character.movie_id).pluck(:title).first} #{Person.where(id: character.person_id).pluck(:name).first} #{character.character_name}"
+end
