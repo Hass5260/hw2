@@ -70,14 +70,97 @@
 # Use `Model.destroy_all` code.
 # TODO!
 
+Movie.destroy_all
+Person.destroy_all
+Role.destroy_all
+
 # Generate models and tables, according to the domain model
-# TODO!
+
+#rails generate model Movie
+#rails generate model Person
+#rails generate model Role
+
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
+Christopher_Nolan = Person.new
+Christopher_Nolan.name = "Christopher Nolan"
+Christopher_Nolan.save
+
+Christian_Bale = Person.new
+Christian_Bale.name = "Christian Bale"
+Christian_Bale.save 
+
+Michael_Caine = Person.new
+Michael_Caine.name = "Michael Caine"
+Michael_Caine.save 
+
+Liam_Neeson = Person.new
+Liam_Neeson.name = "Liam Neeson"
+Liam_Neeson.save 
+
+Katie_Holmes = Person.new
+Katie_Holmes.name = "Katie Holmes"
+Katie_Holmes.save 
+
+Gary_Oldman = Person.new
+Gary_Oldman.name = "Gary Oldman"
+Gary_Oldman.save 
+
+Health_Ledger = Person.new
+Health_Ledger.name = "Health Ledger"
+Health_Ledger.save 
+
+Aaron_Eckhart = Person.new
+Aaron_Eckhart.name = "Aaron Eckhart"
+Aaron_Eckhart.save 
+
+Maggie_Gyllenhaal = Person.new
+Maggie_Gyllenhaal.name = "Maggie Gyllenhaal"
+Maggie_Gyllenhaal.save 
+
+Tom_Hardy = Person.new
+Tom_Hardy.name = "Tom Hardy"
+Tom_Hardy.save 
+
+Joseph_Gordon = Person.new
+Joseph_Gordon.name = "Joseph Gordon-Levitt"
+Joseph_Gordon.save 
+
+Anne_Hathaway = Person.new
+Anne_Hathaway.name = "Anne Hathaway"
+Anne_Hathaway.save 
+
+batman1 = Movie.new
+batman1.title = "Batman Begins"
+batman1.year = 2005
+batman1.rating = "PG-13"
+batman1.person_id = Person.where(name: "Christopher Nolan").pluck(:id).first
+batman1.save
+
+batman2 = Movie.new
+batman2.title = "The Dark Knight"
+batman2.year = 2008
+batman2.rating = "PG-13"
+batman2.person_id = Person.where(name: "Christopher Nolan").pluck(:id).first
+batman2.save
+
+batman3 = Movie.new
+batman3.title = "The Dark Knight Rises"
+batman3.year = 2012
+batman3.rating = "PG-13"
+batman3.person_id = Person.where(name: "Christopher Nolan").pluck(:id).first
+batman3.save
+
+
+
+
 # Prints a header for the movies output
+
+puts "There are #{Movie.all.count} movies"
+
 puts "Movies"
 puts "======"
 puts ""
