@@ -254,7 +254,7 @@ puts ""
 
 movies = Movie.all
 for film in movies
-    puts "#{film.title} #{film.year} #{film.rating} #{Person.where(id: film.person_id).pluck(:name).first}"
+    puts "#{film.title} #{film.year} - #{film.rating} - #{Person.where(id: film.person_id).pluck(:name).first}"
 end
 
 # Prints a header for the cast output
@@ -268,5 +268,5 @@ puts ""
 
 cast = Role.all
 for character in cast
-    puts "#{Movie.where(id: character.movie_id).pluck(:title).first} #{Person.where(id: character.person_id).pluck(:name).first} #{character.character_name}"
+    puts "#{Movie.where(id: character.movie_id).pluck(:title).first} - #{Person.where(id: character.person_id).pluck(:name).first} - #{character.character_name}"
 end
